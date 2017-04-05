@@ -27,9 +27,18 @@ def is_element_ok(element):
     is_extension_ok = is_element_extension_ok(element)
     return is_width_ok and is_src_ok and is_extension_ok
 
-def save_image_for_url(url, imagesCounter = -1):
-    urlEndPosition = url.find('/revision')
-    cleanedImgSrc = url[:urlEndPosition]
+
+
+
+
+def save_image_for_url(url, rusUrl = False, imagesCounter = -1):
+
+    cleanedImgSrc = url
+
+    if not rusUrl:
+        urlEndPosition = url.find('/revision')
+        cleanedImgSrc = url[:urlEndPosition]
+
     print('Link found: ' + cleanedImgSrc)
     driver.get(cleanedImgSrc)
 
@@ -43,6 +52,7 @@ def save_image_for_url(url, imagesCounter = -1):
     driver.get_screenshot_as_file(image_file_name)
     print('***** Image saved!!! *****')
 
+
 def save_images_for_urlsList(urls_list):
     imagesCounter = 1
     for url in urls_list:
@@ -51,6 +61,9 @@ def save_images_for_urlsList(urls_list):
 
 def save_first_image_for_urlsList(urls_list):
     save_image_for_url(urls_list[0])
+
+def rus_save_first_image_for_urlsList(urls_list):
+    save_image_for_url(urls_list[0], True)
 
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
@@ -92,13 +105,46 @@ for index in range(7,15):
     for selected_url in selected_urls:
         print(selected_url)
 
+
     # *** Saving image for name
+    # *** Checking if there're at least 1 url found using ENG URL.
     if len(selected_urls) > 0:
         print('==== Saving process for name: ' + name + ':')
         save_first_image_for_urlsList(selected_urls)
     else:
-        print('No images found for name')
-        continue
+        # *** No ENG URLs found. Try to find images using RUS URLs
+        print('--- No images found for name using ENG URL')
+        print('--- Trying RUS URL...')
 
+        ruslink_cell    = sheet['K'+str(index)]
+        rusurl          = ruslink_cell.value
 
+        if str(rusurl).find('http') == -1:
+            print("There's no RUS URL for name: " + name)
+            print('++++++ Going to the next name ++++++')
+            continue
 
+        driver.get(rusurl)
+
+        rusthumbnails_list = driver.find_elements_by_css_selector('.image.image-thumbnail>img')
+
+        selected_rusurls = []
+
+        # *** Checking thumbnails for size, url_src, extension
+        for thumbnail in rusthumbnails_list:
+            if is_element_ok(thumbnail):
+                src = thumbnail.get_attribute('src')
+                selected_rusurls.append(src)
+
+        # *** Printing selected URLs for name
+        print('selected RUS Urls for name ' + name + ':')
+        for selected_url in selected_rusurls:
+            print(selected_url)
+
+        if len(selected_rusurls) > 0:
+            print('==== Saving process for name: ' + name + ' (from RUS URL):')
+            rus_save_first_image_for_urlsList(selected_rusurls)
+        else:
+            print('--- No images found for name using RUS URL')
+            print('++++++ Going to the next name ++++++')
+            continue
