@@ -1,0 +1,24 @@
+Anteac:FictionDuneMascAnteac
+Bijaz:FictionDuneMascBijaz
+DuncanIdaho:FictionDuneMascDuncanIdaho
+Farad'n:FictionDuneMascFarad'n
+Feyd-Rautha:FictionDuneMascFeyd-Rautha
+GurneyHalleck:FictionDuneMascGurney
+HasimirFenring:FictionDuneMascHasimirFenring
+Jamis:FictionDuneMascJamis
+Korba:FictionDuneMascKorba
+KwisatzHaderach:FictionDuneMascKwisatz
+LetoIAtreides:FictionDuneMascLeto2
+LetoIIAtreides:FictionDuneMascLeto2
+Liet-Kynes:FictionDuneMascLiet-Kynes
+MilesTeg:FictionDuneMascMiles Teg
+Muad'Dib:FictionDuneMascMuad'Dib
+Otheym:FictionDuneMascOtheym
+PiterDeVries:FictionDuneMascPiterDeVries
+Sardaukar:FictionDuneMascSardaukar
+Scytale:FictionDuneMascScytale
+ShaddamIV:FictionDuneMascShaddam4
+Shai-Hulud:FictionDuneMascShai-Hulud
+Stilgar:FictionDuneMascStilgar
+ThufirHawat:FictionDuneMascThufir
+VladimirHarkonnen:FictionDuneMascVladimirHarkonnen

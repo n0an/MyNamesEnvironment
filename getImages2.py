@@ -6,12 +6,15 @@ from selenium import webdriver
 import os
 import shutil
 import openpyxl
+import bs4
+import requests
+
 
 # Windows ver:
 # driver = webdriver.Chrome("C:/chromedriver.exe")
 
 # MacOS ver:
-driver = webdriver.Chrome("../chromedriver")
+# driver = webdriver.Chrome("../chromedriver")
 
 # === 1. Opening source workbook with names ===
 
@@ -20,37 +23,58 @@ sheet = workbook.get_sheet_by_name('sheet1')
 
 
 
-for index in range(2,100):
+for index in range(7,10):
     name_cell       = sheet['B'+str(index)]
     imagename_cell  = sheet['F'+str(index)]
     link_cell       = sheet['E'+str(index)]
 
-    gender_cell     = sheet['C'+str(index)]
-
     name = name_cell.value
-    imagename = 'FictionTolkien' + gender_cell.value + name
+    imagename = imagename_cell.value
     url = link_cell.value
 
     print(' ^^^^^^^^^^^^^^ Start processing name: ' + name)
 
-    driver.get(url)
+    # driver.get(url)
 
-    thumbnails_list = driver.find_elements_by_css_selector('.image.image-thumbnail>img')
+    res = requests.get(url)
+    soup = bs4.BeautifulSoup(res.text, "lxml")
+
+
+    # thumbnails_list = driver.find_elements_by_css_selector('.image.image-thumbnail>img')
+
+    thumbnails_list = soup.select('.image.image-thumbnail')
 
     selectedUrls = []
 
     for thumbnail in thumbnails_list:
-        src = thumbnail.get_attribute('src')
+        raw_src = str(thumbnail)
 
-        # print('Working with thumbnail: \n' + src + '\n')
+        print('Working with thumbnail: \n' + raw_src + '\n')
 
-        if (int(thumbnail.get_attribute('width')) > 150) and (src.find("wikia.nocookie.net/lotr/images") != -1):
+        widthStr_start_index = raw_src.finc('width=')
+        width_rawStr = raw_src[widthStr_start_index+7:]
+        widthStr_end_index = width_rawStr.find('"')
+        widthStr = width_rawStr[:3]
+
+        print('Width = ' + widthStr)
+
+        src_index = raw_src.find('src="')
+
+        clean_src = raw_src[src_index+5:]
+
+        urlEndPosition = clean_src.find('/revision')
+
+        clean_src = clean_src[:urlEndPosition]
+
+        print('Cleaned url: \n' + clean_src)
+
+        if (int(widthStr) > 150) and (raw_src.find("wikia.nocookie.net/lotr/images") != -1):
             print('--Size and url location passed')
             if src.find('.jpg') != -1 or src.find('.png') != 1:
                 print('==== extension passed!')
-                selectedUrls.append(src)
+                selectedUrls.append(clean_src)
 
-    print('selectedUrls for name ' + name + ': \n')
+    print('selectedThumbs for name ' + name + ': \n')
 
     imagesCounter = 1
 
@@ -59,20 +83,19 @@ for index in range(2,100):
 
         print(selectedUrl)
 
-        urlEndPosition = selectedUrl.find('/revision')
-        cleanedImgSrc = selectedUrl[:urlEndPosition]
-        print('Link found: ' + cleanedImgSrc)
-        driver.get(cleanedImgSrc)
-
-        # Windows ver:
-        # driver.get_screenshot_as_file('C:/Users/nag/Desktop/aragorn.png')
-
-        # MacOS ver:
-
-        image_file_name = imagename + str(imagesCounter) + '.jpg'
-        imagesCounter += 1
-        driver.get_screenshot_as_file(image_file_name)
-        print('***** Image saved!!! *****')
+        # urlEndPosition = imgSrc.find('/revision')
+        # cleanedImgSrc = imgSrc[:urlEndPosition]
+        # print('Link found: ' + cleanedImgSrc)
+        # driver.get(cleanedImgSrc)
+        #
+        # # Windows ver:
+        # # driver.get_screenshot_as_file('C:/Users/nag/Desktop/aragorn.png')
+        #
+        # # MacOS ver:
+        # image_file_name = imagename + str(imagesCounter) + '.jpg'
+        # imagesCounter += 1
+        # driver.get_screenshot_as_file(image_file_name)
+        # print('***** Image saved!!! *****')
 
 
 
