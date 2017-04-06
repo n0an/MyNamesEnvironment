@@ -111,27 +111,37 @@ def rus_retrieve_first_image_for_urlsList(urls_list):
     retrieve_image_for_url(urls_list[0], True)
 
 
-def create_dir_for_names_images(category_path, gender):
-    dir_path = category_path + '/' + gender
+def create_dir_for_names_images(category_path):
+    dir_path = category_path
     os.makedirs(dir_path)
     return dir_path
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
-# Windows ver:
-driver = webdriver.Chrome("C:/chromedriver.exe")
 
-# MacOS ver:
-# driver = webdriver.Chrome("../chromedriver")
+# *** SCRIPT CONFIGURATION:
+cell_start_number   = 2
+cell_end_number     = 73
+macos               = 1
+
+if macos == 1:
+    # MacOS ver:
+    path_to_chromedriver = "../chromedriver"
+else:
+    # Windows ver:
+    path_to_chromedriver = "C:/chromedriver.exe"
+
+
+driver = webdriver.Chrome(path_to_chromedriver)
 
 # === 1. Opening source workbook with names ===
 workbook = openpyxl.load_workbook('sourcetable.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
-dir_path = create_dir_for_names_images('Fiction/Tolkien', 'Masc')
+dir_path = create_dir_for_names_images('Fiction/Tolkien/')
 
 
 # === 2. Iterating throught cells
-for index in range(2,68):
+for index in range(cell_start_number ,cell_end_number + 1):
     name_cell       = sheet['B'+str(index)]
     link_cell       = sheet['E'+str(index)]
     gender_cell     = sheet['C'+str(index)]
