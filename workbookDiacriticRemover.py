@@ -12,7 +12,7 @@ from unidecode import unidecode
 workbook = openpyxl.load_workbook('sourcetable.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
-for index in range(2, 86):
+for index in range(2, 69):
     name_cell       = sheet['B'+str(index)]
     gender_cell     = sheet['C'+str(index)]
 

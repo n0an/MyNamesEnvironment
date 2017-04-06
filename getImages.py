@@ -131,17 +131,18 @@ dir_path = create_dir_for_names_images('Fiction/Tolkien', 'Masc')
 
 
 # === 2. Iterating throught cells
-for index in range(1,345):
+for index in range(2,68):
     name_cell       = sheet['B'+str(index)]
     link_cell       = sheet['E'+str(index)]
     gender_cell     = sheet['C'+str(index)]
-
+    imagename_cell  = sheet['F'+str(index)]
 
     name        = name_cell.value
-    imagename   = 'FictionTolkien' + gender_cell.value + name
+    # imagename   = 'FictionTolkien' + gender_cell.value + name
+    imagename   = imagename_cell.value
     url         = link_cell.value
 
-    print('\n' + str(index) + '. ^^^^^^^^^^^^^^ Start processing name: ' + name)
+    print('\n' + str(index-1) + '. ^^^^^^^^^^^^^^ Start processing name: ' + name)
     driver.get(url)
 
     thumbnails_list = driver.find_elements_by_css_selector('.image.image-thumbnail>img')

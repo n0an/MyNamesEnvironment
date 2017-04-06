@@ -9,7 +9,7 @@ from unidecode import unidecode
 def plain_rename(files_list):
     for file_name in files_list:
         cropped = file_name[18:]
-        new_name = 'FictionTolkienMenMasc' + cropped
+        new_name = 'FictionTolkienElvesMasc' + cropped
 
         full_src_name = src_dir + file_name
         full_new_name = target_dir + new_name
