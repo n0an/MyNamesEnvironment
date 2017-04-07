@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunningCampaignSettingsParser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <settingsFileFullPath>C:\Users\n0an\AppData\Roaming\Datacol7\Campaigns\lotr4.par</settingsFileFullPath>
+  <dbs>
+    <Interval>0</Interval>
+    <PagesPerParsing>0</PagesPerParsing>
+    <ResultsPerParsing>0</ResultsPerParsing>
+    <MaximumDemoResults>50</MaximumDemoResults>
+    <LoadPortions>false</LoadPortions>
+    <PortionSize>0</PortionSize>
+    <PortionInterval>60</PortionInterval>
+    <ValidRegexes />
+    <InvalidRegexes />
+    <MaxQueueReputs>1</MaxQueueReputs>
+    <MaxErrorsTillStop>0</MaxErrorsTillStop>
+    <SaveLogToFile>true</SaveLogToFile>
+    <MaxLogRecords>1000</MaxLogRecords>
+    <ReputPagesToQueue>false</ReputPagesToQueue>
+    <StartingUrlAlways>false</StartingUrlAlways>
+    <NewToQueueStart>true</NewToQueueStart>
+    <HandleHistoryAndQueue>false</HandleHistoryAndQueue>
+    <ClearHistoryAfterSession>false</ClearHistoryAfterSession>
+    <ClearQueueAfterSession>false</ClearQueueAfterSession>
+    <MaxInQueueAndHistory>0</MaxInQueueAndHistory>
+    <QueueToHistoryInEnd>false</QueueToHistoryInEnd>
+    <SendCampaignFinishNotification>false</SendCampaignFinishNotification>
+    <SendErrorsTooMuchNotification>false</SendErrorsTooMuchNotification>
+    <TargetEmail />
+    <SMTPServer />
+    <SMTPport>0</SMTPport>
+    <SMTPlogin />
+    <SMTPpassword />
+    <SMTPssl>false</SMTPssl>
+  </dbs>
+  <loaderSetting>
+    <LoaderType>BROWSER</LoaderType>
+    <LoadNumber>3</LoadNumber>
+    <ConnectTimeout>20</ConnectTimeout>
+    <CachePages>false</CachePages>
+    <LoaderTestingString>http://ru.lotr.wikia.com/wiki/Категория:Гномы</LoaderTestingString>
+    <UserAgents>
+      <string>Mozilla/5.0 (Windows NT 6.1; rv:22.0) Gecko/20130405 Firefox/22.0</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20130406 Firefox/23.0</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:23.0) Gecko/20131011 Firefox/23.0</string>
+      <string>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1468.0 Safari/537.36</string>
+      <string>Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1467.0 Safari/537.36</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:22.0) Gecko/20130328 Firefox/22.0</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.6; Windows NT 6.1; Trident/5.0; InfoPath.2; SLCC1; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727) 3gpp-gba UNTRUSTED/1.0</string>
+      <string>Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1464.0 Safari/537.36</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)</string>
+      <string>Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)</string>
+      <string>Mozilla/5.0 (Windows NT 6.0; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.14</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0) Opera 12.14</string>
+      <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17</string>
+      <string>Opera/12.80 (Windows NT 5.1; U; en) Presto/2.10.289 Version/12.02</string>
+      <string>Opera/9.80 (Windows NT 6.1; U; es-ES) Presto/2.9.181 Version/12.00</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/5.0)</string>
+      <string>Opera/9.80 (Windows NT 5.1; U; zh-sg) Presto/2.9.181 Version/12.00</string>
+      <string>Opera/12.0(Windows NT 5.2;U;en)Presto/22.9.168 Version/12.00</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/4.0; InfoPath.2; SV1; .NET CLR 2.0.50727; WOW64)</string>
+      <string>Opera/12.0(Windows NT 5.1;U;en)Presto/22.9.168 Version/12.00</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0</string>
+      <string>Mozilla/5.0 (compatible; MSIE 10.0; Macintosh; Intel Mac OS X 10_7_3; Trident/6.0)</string>
+      <string>Mozilla/5.0 (Windows NT 5.1) Gecko/20100101 Firefox/14.0 Opera/12.0</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; Win64; x64;) Gecko/20100101 Firefox/20.0</string>
+      <string>Mozilla/4.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/5.0)</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/19.0</string>
+      <string>Mozilla/1.22 (compatible; MSIE 10.0; Windows 3.1)</string>
+      <string>Opera/9.80 (Windows NT 6.1; WOW64; U; pt) Presto/2.10.229 Version/11.62</string>
+      <string>Opera/9.80 (Windows NT 6.0; U; pl) Presto/2.10.229 Version/11.62</string>
+      <string>Mozilla/5.0 (Windows; U; MSIE 9.0; WIndows NT 9.0; en-US))</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; rv:14.0) Gecko/20100101 Firefox/18.0.1</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0)  Gecko/20100101 Firefox/18.0</string>
+      <string>Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; de) Presto/2.9.168 Version/11.52</string>
+      <string>Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)</string>
+      <string>Opera/9.80 (Windows NT 5.1; U; en) Presto/2.9.168 Version/11.51</string>
+      <string>Mozilla/5.0 (X11; Ubuntu; Linux armv7l; rv:17.0) Gecko/20100101 Firefox/17.0</string>
+      <string>Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; Media Center PC 6.0; InfoPath.3; MS-RTC LM 8; Zune 4.7)</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/24.0.1292.0 Safari/537.14</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; Media Center PC 6.0; InfoPath.3; MS-RTC LM 8; Zune 4.7</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; InfoPath.3; MS-RTC LM 8; .NET4.0C; .NET4.0E)</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; chromeframe/12.0.742.112)</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; Tablet PC 2.0; InfoPath.3; .NET4.0C; .NET4.0E)</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0</string>
+      <string>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; yie8)</string>
+      <string>Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</string>
+      <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</string>
+      <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</string>
+      <string>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20120716 Firefox/15.0a2</string>
+      <string>Opera/9.80 (X11; Linux x86_64; U; fr) Presto/2.9.168 Version/11.50</string>
+      <string>Opera/9.80 (X11; Linux i686; U; hu) Presto/2.9.168 Version/11.50</string>
+      <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.6 Safari/537.11</string>
+      <string>Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11</string>
+      <string>Opera/9.80 (X11; Linux i686; U; es-ES) Presto/2.8.131 Version/11.11</string>
+      <string>Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.26 Safari/537.11</string>
+      <string>Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/5.0 Opera 11.11</string>
+      <string>Mozilla/5.0 (Windows NT 6.0) yi; AppleWebKit/345667.12221 (KHTML, like Gecko) Chrome/23.0.1271.26 Safari/453667.1221</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.17 Safari/537.11</string>
+      <string>Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4</string>
+      <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_0) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4</string>
+      <string>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.16) Gecko/20120427 Firefox/15.0a1</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1</string>
+      <string>Mozilla/5.0 (Windows NT 6.2; WOW64; rv:15.0) Gecko/20120910144328 Firefox/15.0.2</string>
+      <string>Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:14.0) Gecko/20120405 Firefox/14.0a1</string>
+      <string>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2</string>
+      <string>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1</string>
+    </UserAgents>
+    <UserAgentUsingOrder>SERIAL</UserAgentUsingOrder>
+    <Referers />
+    <RefererUsingOrder>RANDOM</RefererUsingOrder>
+    <UseProxy>false</UseProxy>
+    <ProxySourceOption>LIST</ProxySourceOption>
+    <ProxyList />
+    <GetProxyMode>RANDOM</GetProxyMode>
+    <ProxyFilePath />
+    <CacheFolderPath />
+    <AfterLoadGlobalReplaces />
+    <HttpHeaders />
+    <LoaderEncoding />
+    <HandleCookies>true</HandleCookies>
+    <SaveCookiesToFile>false</SaveCookiesToFile>
+    <CookiesSavePath />
+    <AuthMode>no</AuthMode>
+    <AuthCookies />
+    <BrowserApplicationWaitTimeout>6000</BrowserApplicationWaitTimeout>
+    <DisableImages>false</DisableImages>
+    <DisableJavascript>false</DisableJavascript>
+    <ShowBrowserForm>true</ShowBrowserForm>
+    <RunScenario>false</RunScenario>
+    <PartialLoad>false</PartialLoad>
+    <IgnoreLoadIfTheSameUrl>false</IgnoreLoadIfTheSameUrl>
+    <ScenarioParamList />
+    <ScenarioBlockList />
+    <LoaderPlugin />
+    <LoaderPluginConfig />
+  </loaderSetting>
+  <dns>
+    <GenerateStartingUrls>false</GenerateStartingUrls>
+    <StartingUrlsList>
+      <string>http://lotr.wikia.com/wiki/Category:Ainur</string>
+      <string>http://lotr.wikia.com/wiki/Category:Maiar</string>
+      <string>http://lotr.wikia.com/wiki/Category:Wizards</string>
+      <string>http://lotr.wikia.com/wiki/Category:Demons</string>
+      <string>http://lotr.wikia.com/wiki/Category:Balrogs</string>
+      <string>http://lotr.wikia.com/wiki/Category:Valar</string>
+      <string>http://lotr.wikia.com/wiki/Category:Aratar</string>
+    </StartingUrlsList>
+    <GetStartingUrlsFromFileOrList>UrlFromList</GetStartingUrlsFromFileOrList>
+    <StartingUrlsFilePath />
+    <GetStaringUrlsPlugin />
+    <StartingUrlsUseFormula>false</StartingUrlsUseFormula>
+    <FormulaForStaringUrlGeneration />
+    <MatchStringList />
+    <Depth>1000</Depth>
+    <PageUrlToGatherLinksFromMatchRules>
+      <ExistStrings />
+      <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+      <NotExistStrings>
+        <string>.png</string>
+        <string>.jpg</string>
+        <string>.gif</string>
+        <string>.rar</string>
+        <string>.msi</string>
+      </NotExistStrings>
+      <NotExistStringsAllMust>true</NotExistStringsAllMust>
+      <isRegex>false</isRegex>
+    </PageUrlToGatherLinksFromMatchRules>
+    <PageCodeToGatherLinksFromMatchRules>
+      <ExistStrings />
+      <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+      <NotExistStrings />
+      <NotExistStringsAllMust>true</NotExistStringsAllMust>
+      <isRegex>false</isRegex>
+    </PageCodeToGatherLinksFromMatchRules>
+    <PreprocessBasicLinkReplaceRegex />
+    <CutAfterSharp>false</CutAfterSharp>
+    <GatherLinksMode>in</GatherLinksMode>
+    <LinksToSubdomainsAreExternal>false</LinksToSubdomainsAreExternal>
+    <PreProcessLinks>false</PreProcessLinks>
+    <AvoidLinkPagesFromGlobalHistory>false</AvoidLinkPagesFromGlobalHistory>
+    <GatherLinksAreaRegexes />
+    <GatherLinksAreaXPathes>
+      <string>//td/ul/li/a</string>
+      <string>//div[@class='wikia-paginator']/ul/li</string>
+    </GatherLinksAreaXPathes>
+    <linkCutStrings />
+    <LinkGatherPlugin />
+    <LinkGatherTestString>http://ru.lotr.wikia.com/wiki/Категория:Люди</LinkGatherTestString>
+    <NaviLinkFilter>
+      <ExistStrings />
+      <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+      <NotExistStrings />
+      <NotExistStringsAllMust>true</NotExistStringsAllMust>
+      <isRegex>false</isRegex>
+    </NaviLinkFilter>
+  </dns>
+  <des>
+    <ExportCustom>false</ExportCustom>
+    <ExportWP>false</ExportWP>
+    <ExportExcel>true</ExportExcel>
+    <ExportMySQL>false</ExportMySQL>
+    <ExportPlugin>false</ExportPlugin>
+    <RuntimeExport>false</RuntimeExport>
+    <ProcessFinishPlugin />
+    <FinalizePlugin />
+    <UrlTest>http://ru.lotr.wikia.com/wiki/Балин</UrlTest>
+    <CustomFormatGenerationFormula />
+    <CustomFormatFilenameGenerationFormula />
+    <CustomFormatSaveFolder />
+    <SaveWin1251>true</SaveWin1251>
+    <RewriteFile>false</RewriteFile>
+    <MaxFileSize>0</MaxFileSize>
+    <CustomFormatFileFtpUpload>false</CustomFormatFileFtpUpload>
+    <CustomFormatFileRemoveFromComputerAfterFtpLoad>false</CustomFormatFileRemoveFromComputerAfterFtpLoad>
+    <CustomFormatFileMaximumFtpLoadAttempts>1</CustomFormatFileMaximumFtpLoadAttempts>
+    <CustomFormatFileScriptAfterFtpUpload />
+    <CustomFormatFileScriptUse>false</CustomFormatFileScriptUse>
+    <FtpServer />
+    <FtpPort>0</FtpPort>
+    <FtpLogin />
+    <FtpPassword />
+    <FtpDirectory />
+    <ExcelSaveFolder />
+    <ExcelFilenameGenerationFormula>lotr 4.xlsx</ExcelFilenameGenerationFormula>
+    <MysqlLogin />
+    <MysqlPassword />
+    <MysqlServer />
+    <MysqlPort>0</MysqlPort>
+    <DBname />
+    <MysqlQuery />
+    <UseMssql>false</UseMssql>
+    <ExportPluginPath />
+    <ExportPluginRules />
+    <WPDraft>false</WPDraft>
+    <WPxmlrpc />
+    <WPlogin />
+    <WPpass />
+    <WPheader />
+    <WPcontent />
+    <WPdate />
+    <WPtags />
+    <WPcategories />
+    <RandomCategory>false</RandomCategory>
+    <WPminSymbolsTillMore>0</WPminSymbolsTillMore>
+    <WPmoreAfterFirstPicture>false</WPmoreAfterFirstPicture>
+    <WPcustomFields />
+  </des>
+  <ddgs>
+    <MatchStringList />
+    <PageUrlToGatherDataFromMatchRules>
+      <ExistStrings />
+      <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+      <NotExistStrings>
+        <string>.png</string>
+        <string>.jpg</string>
+        <string>.gif</string>
+        <string>.rar</string>
+        <string>.msi</string>
+      </NotExistStrings>
+      <NotExistStringsAllMust>true</NotExistStringsAllMust>
+      <isRegex>false</isRegex>
+    </PageUrlToGatherDataFromMatchRules>
+    <PageCodeToGatherDataFromMatchRules>
+      <ExistStrings />
+      <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+      <NotExistStrings />
+      <NotExistStringsAllMust>true</NotExistStringsAllMust>
+      <isRegex>false</isRegex>
+    </PageCodeToGatherDataFromMatchRules>
+    <DataGatherTestingString>http://ru.lotr.wikia.com/wiki/Балин</DataGatherTestingString>
+    <RangesMode>ALL_PAGE</RangesMode>
+    <RangeHarvestRegexes />
+    <RangeHarvestXpathes />
+    <RangeSelectMode>
+      <SelectModeType>ALL</SelectModeType>
+      <Range>1-3</Range>
+    </RangeSelectMode>
+    <PluginToGatherAreas />
+    <GlobalReplacesAfterDataGather />
+    <DataFields>
+      <DataField>
+        <fieldDynamicPluginEngineSetting>
+          <processDataFieldSetting>
+            <active>false</active>
+            <name>data field process plugin</name>
+            <dllList>
+              <string>System.dll</string>
+            </dllList>
+            <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static string processDataFieldValue(string s, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return s;
+                                    }
+                                }
+                            }
+                    </sourceCode>
+            <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+            <dllListToIgnoreLoad />
+            <dynamicGUID />
+            <methodName>processDataFieldValue</methodName>
+          </processDataFieldSetting>
+        </fieldDynamicPluginEngineSetting>
+        <FieldType>standard</FieldType>
+        <DataFieldName>name</DataFieldName>
+        <CutStringsRegexGroup>0</CutStringsRegexGroup>
+        <CutStrings />
+        <Xpathes>
+          <string>//h1</string>
+        </Xpathes>
+        <AllowedTags>&lt;br&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;li&gt;</AllowedTags>
+        <TagsProcessingMode>REMOVE</TagsProcessingMode>
+        <LookInRefererCode>false</LookInRefererCode>
+        <Comments />
+        <SearchRegexInXpathResults>false</SearchRegexInXpathResults>
+        <ValueMatchRules>
+          <ExistStrings />
+          <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+          <NotExistStrings />
+          <NotExistStringsAllMust>true</NotExistStringsAllMust>
+          <isRegex>false</isRegex>
+        </ValueMatchRules>
+        <MatchRuleFormula>
+          <FormulasToMatch />
+        </MatchRuleFormula>
+        <MatchNumberEntitiesBy>NOT</MatchNumberEntitiesBy>
+        <RuleEntitiesRange>
+          <Min>1</Min>
+          <Max>100</Max>
+        </RuleEntitiesRange>
+        <MatchRuleSeparatedStringToSplit />
+        <ValueNotEmpty>false</ValueNotEmpty>
+        <TestAfterProcess>false</TestAfterProcess>
+        <FieldReplaces>
+          <Replace>
+            <Source>&amp;nbsp;</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>&amp;amp;</Source>
+            <Dest>&amp;</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>[\n\r\t]{1,}</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>[ ]{2,}</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>&lt;script.*?&lt;/script&gt;</Source>
+            <Dest />
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+        </FieldReplaces>
+        <StaticFieldValueSelectMode>
+          <SelectModeType>ALL</SelectModeType>
+          <Range>1-3</Range>
+        </StaticFieldValueSelectMode>
+        <StaticFieldValuesUniteString>,</StaticFieldValuesUniteString>
+        <FieldNecessary>true</FieldNecessary>
+        <DefaultValue />
+        <CutEntitiesNumber>1</CutEntitiesNumber>
+        <CutBy>NOT_TRIM</CutBy>
+        <StringToSplitValueForCutting />
+        <SpecValueType>URL</SpecValueType>
+        <DownloadFiles>false</DownloadFiles>
+        <DownloadableExtensions>
+          <string>.jpg</string>
+          <string>.jpeg</string>
+          <string>.png</string>
+          <string>.gif</string>
+        </DownloadableExtensions>
+        <DownloadFolder />
+        <DownloadVirtualPath />
+        <DownloadLinkIdentificationRule />
+        <DownloadFilenameGenerationMode>NOT</DownloadFilenameGenerationMode>
+        <DownloadExistingFilesHandlingMode>OVERWRITE_EXISTING</DownloadExistingFilesHandlingMode>
+        <DownloadGenerationFilenameFormula />
+        <DownloadFileFinalExtension />
+        <DownloadFileFolderGenerationMode>NOT</DownloadFileFolderGenerationMode>
+        <DownloadGenerationFileFolderFormula />
+        <LoadMaxAttLoad>2</LoadMaxAttLoad>
+        <ReturnValue>VIRTUAL_PATH</ReturnValue>
+        <LoadFilePlugin />
+        <DownloadFileFileFtpUpload>false</DownloadFileFileFtpUpload>
+        <DownloadFileFileRemoveFromComputerAfterFtpLoad>false</DownloadFileFileRemoveFromComputerAfterFtpLoad>
+        <FtpGenerateSubfolderServer>false</FtpGenerateSubfolderServer>
+        <DownloadFileFileMaximumFtpLoadAttempts>1</DownloadFileFileMaximumFtpLoadAttempts>
+        <FtpServer />
+        <FtpPort>0</FtpPort>
+        <FtpLogin />
+        <FtpPassword />
+        <FtpDirectory />
+        <DataGatherPlugin />
+        <DataGatherPluginConfig />
+      </DataField>
+      <DataField>
+        <fieldDynamicPluginEngineSetting>
+          <processDataFieldSetting>
+            <active>false</active>
+            <name>data field process plugin</name>
+            <dllList>
+              <string>System.dll</string>
+            </dllList>
+            <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static string processDataFieldValue(string s, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return s;
+                                    }
+                                }
+                            }
+                    </sourceCode>
+            <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+            <dllListToIgnoreLoad />
+            <dynamicGUID />
+            <methodName>processDataFieldValue</methodName>
+          </processDataFieldSetting>
+        </fieldDynamicPluginEngineSetting>
+        <FieldType>standard</FieldType>
+        <DataFieldName>gender</DataFieldName>
+        <CutStringsRegexGroup>0</CutStringsRegexGroup>
+        <CutStrings />
+        <Xpathes>
+          <string>//tr[td/b='Пол:']//td[2]</string>
+        </Xpathes>
+        <AllowedTags>&lt;br&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;li&gt;</AllowedTags>
+        <TagsProcessingMode>REMOVE</TagsProcessingMode>
+        <LookInRefererCode>false</LookInRefererCode>
+        <Comments />
+        <SearchRegexInXpathResults>false</SearchRegexInXpathResults>
+        <ValueMatchRules>
+          <ExistStrings />
+          <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+          <NotExistStrings />
+          <NotExistStringsAllMust>true</NotExistStringsAllMust>
+          <isRegex>false</isRegex>
+        </ValueMatchRules>
+        <MatchRuleFormula>
+          <FormulasToMatch />
+        </MatchRuleFormula>
+        <MatchNumberEntitiesBy>NOT</MatchNumberEntitiesBy>
+        <RuleEntitiesRange>
+          <Min>1</Min>
+          <Max>100</Max>
+        </RuleEntitiesRange>
+        <MatchRuleSeparatedStringToSplit />
+        <ValueNotEmpty>false</ValueNotEmpty>
+        <TestAfterProcess>false</TestAfterProcess>
+        <FieldReplaces />
+        <StaticFieldValueSelectMode>
+          <SelectModeType>ALL</SelectModeType>
+          <Range>1-3</Range>
+        </StaticFieldValueSelectMode>
+        <StaticFieldValuesUniteString>,</StaticFieldValuesUniteString>
+        <FieldNecessary>false</FieldNecessary>
+        <DefaultValue />
+        <CutEntitiesNumber>1</CutEntitiesNumber>
+        <CutBy>NOT_TRIM</CutBy>
+        <StringToSplitValueForCutting />
+        <SpecValueType>URL</SpecValueType>
+        <DownloadFiles>false</DownloadFiles>
+        <DownloadableExtensions>
+          <string>.jpg</string>
+          <string>.jpeg</string>
+          <string>.png</string>
+          <string>.gif</string>
+        </DownloadableExtensions>
+        <DownloadFolder />
+        <DownloadVirtualPath />
+        <DownloadLinkIdentificationRule />
+        <DownloadFilenameGenerationMode>NOT</DownloadFilenameGenerationMode>
+        <DownloadExistingFilesHandlingMode>OVERWRITE_EXISTING</DownloadExistingFilesHandlingMode>
+        <DownloadGenerationFilenameFormula />
+        <DownloadFileFinalExtension />
+        <DownloadFileFolderGenerationMode>NOT</DownloadFileFolderGenerationMode>
+        <DownloadGenerationFileFolderFormula />
+        <LoadMaxAttLoad>2</LoadMaxAttLoad>
+        <ReturnValue>VIRTUAL_PATH</ReturnValue>
+        <LoadFilePlugin />
+        <DownloadFileFileFtpUpload>false</DownloadFileFileFtpUpload>
+        <DownloadFileFileRemoveFromComputerAfterFtpLoad>false</DownloadFileFileRemoveFromComputerAfterFtpLoad>
+        <FtpGenerateSubfolderServer>false</FtpGenerateSubfolderServer>
+        <DownloadFileFileMaximumFtpLoadAttempts>1</DownloadFileFileMaximumFtpLoadAttempts>
+        <FtpServer />
+        <FtpPort>0</FtpPort>
+        <FtpLogin />
+        <FtpPassword />
+        <FtpDirectory />
+        <DataGatherPlugin />
+        <DataGatherPluginConfig />
+      </DataField>
+      <DataField>
+        <fieldDynamicPluginEngineSetting>
+          <processDataFieldSetting>
+            <active>false</active>
+            <name>data field process plugin</name>
+            <dllList>
+              <string>System.dll</string>
+            </dllList>
+            <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static string processDataFieldValue(string s, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return s;
+                                    }
+                                }
+                            }
+                    </sourceCode>
+            <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+            <dllListToIgnoreLoad />
+            <dynamicGUID />
+            <methodName>processDataFieldValue</methodName>
+          </processDataFieldSetting>
+        </fieldDynamicPluginEngineSetting>
+        <FieldType>standard</FieldType>
+        <DataFieldName>description</DataFieldName>
+        <CutStringsRegexGroup>0</CutStringsRegexGroup>
+        <CutStrings />
+        <Xpathes>
+          <string>//div[@id='mw-content-text']/p</string>
+        </Xpathes>
+        <AllowedTags>&lt;br&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;li&gt;</AllowedTags>
+        <TagsProcessingMode>REMOVE</TagsProcessingMode>
+        <LookInRefererCode>false</LookInRefererCode>
+        <Comments />
+        <SearchRegexInXpathResults>false</SearchRegexInXpathResults>
+        <ValueMatchRules>
+          <ExistStrings />
+          <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+          <NotExistStrings />
+          <NotExistStringsAllMust>true</NotExistStringsAllMust>
+          <isRegex>false</isRegex>
+        </ValueMatchRules>
+        <MatchRuleFormula>
+          <FormulasToMatch />
+        </MatchRuleFormula>
+        <MatchNumberEntitiesBy>NOT</MatchNumberEntitiesBy>
+        <RuleEntitiesRange>
+          <Min>1</Min>
+          <Max>100</Max>
+        </RuleEntitiesRange>
+        <MatchRuleSeparatedStringToSplit />
+        <ValueNotEmpty>false</ValueNotEmpty>
+        <TestAfterProcess>false</TestAfterProcess>
+        <FieldReplaces>
+          <Replace>
+            <Source>&amp;nbsp;</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>&amp;amp;</Source>
+            <Dest>&amp;</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>"</Source>
+            <Dest>'</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>&amp;[^;]{3,5};</Source>
+            <Dest />
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>;</Source>
+            <Dest>,</Dest>
+            <IsRegex>false</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>[\n\r\t]{1,}</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>[ ]{2,}</Source>
+            <Dest>%SPACE%</Dest>
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+          <Replace>
+            <Source>&lt;script.*?&lt;/script&gt;</Source>
+            <Dest />
+            <IsRegex>true</IsRegex>
+            <Active>true</Active>
+          </Replace>
+        </FieldReplaces>
+        <StaticFieldValueSelectMode>
+          <SelectModeType>ALL</SelectModeType>
+          <Range>1-3</Range>
+        </StaticFieldValueSelectMode>
+        <StaticFieldValuesUniteString>,</StaticFieldValuesUniteString>
+        <FieldNecessary>false</FieldNecessary>
+        <DefaultValue />
+        <CutEntitiesNumber>10000</CutEntitiesNumber>
+        <CutBy>SYMBOLS</CutBy>
+        <StringToSplitValueForCutting />
+        <SpecValueType>URL</SpecValueType>
+        <DownloadFiles>false</DownloadFiles>
+        <DownloadableExtensions>
+          <string>.jpg</string>
+          <string>.jpeg</string>
+          <string>.png</string>
+          <string>.gif</string>
+        </DownloadableExtensions>
+        <DownloadFolder />
+        <DownloadVirtualPath />
+        <DownloadLinkIdentificationRule />
+        <DownloadFilenameGenerationMode>NOT</DownloadFilenameGenerationMode>
+        <DownloadExistingFilesHandlingMode>OVERWRITE_EXISTING</DownloadExistingFilesHandlingMode>
+        <DownloadGenerationFilenameFormula />
+        <DownloadFileFinalExtension />
+        <DownloadFileFolderGenerationMode>NOT</DownloadFileFolderGenerationMode>
+        <DownloadGenerationFileFolderFormula />
+        <LoadMaxAttLoad>2</LoadMaxAttLoad>
+        <ReturnValue>VIRTUAL_PATH</ReturnValue>
+        <LoadFilePlugin />
+        <DownloadFileFileFtpUpload>false</DownloadFileFileFtpUpload>
+        <DownloadFileFileRemoveFromComputerAfterFtpLoad>false</DownloadFileFileRemoveFromComputerAfterFtpLoad>
+        <FtpGenerateSubfolderServer>false</FtpGenerateSubfolderServer>
+        <DownloadFileFileMaximumFtpLoadAttempts>1</DownloadFileFileMaximumFtpLoadAttempts>
+        <FtpServer />
+        <FtpPort>0</FtpPort>
+        <FtpLogin />
+        <FtpPassword />
+        <FtpDirectory />
+        <DataGatherPlugin />
+        <DataGatherPluginConfig />
+      </DataField>
+      <DataField>
+        <fieldDynamicPluginEngineSetting>
+          <processDataFieldSetting>
+            <active>false</active>
+            <name>data field process plugin</name>
+            <dllList>
+              <string>System.dll</string>
+            </dllList>
+            <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static string processDataFieldValue(string s, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return s;
+                                    }
+                                }
+                            }
+                    </sourceCode>
+            <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+            <dllListToIgnoreLoad />
+            <dynamicGUID />
+            <methodName>processDataFieldValue</methodName>
+          </processDataFieldSetting>
+        </fieldDynamicPluginEngineSetting>
+        <FieldType>spec</FieldType>
+        <DataFieldName>URL</DataFieldName>
+        <CutStringsRegexGroup>0</CutStringsRegexGroup>
+        <CutStrings />
+        <Xpathes />
+        <AllowedTags>&lt;br&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;li&gt;</AllowedTags>
+        <TagsProcessingMode>REMOVE</TagsProcessingMode>
+        <LookInRefererCode>false</LookInRefererCode>
+        <Comments />
+        <SearchRegexInXpathResults>false</SearchRegexInXpathResults>
+        <ValueMatchRules>
+          <ExistStrings />
+          <ExistStringsAllMustBe>false</ExistStringsAllMustBe>
+          <NotExistStrings />
+          <NotExistStringsAllMust>true</NotExistStringsAllMust>
+          <isRegex>false</isRegex>
+        </ValueMatchRules>
+        <MatchRuleFormula>
+          <FormulasToMatch />
+        </MatchRuleFormula>
+        <MatchNumberEntitiesBy>NOT</MatchNumberEntitiesBy>
+        <RuleEntitiesRange>
+          <Min>1</Min>
+          <Max>100</Max>
+        </RuleEntitiesRange>
+        <MatchRuleSeparatedStringToSplit />
+        <ValueNotEmpty>false</ValueNotEmpty>
+        <TestAfterProcess>false</TestAfterProcess>
+        <FieldReplaces />
+        <StaticFieldValueSelectMode>
+          <SelectModeType>ALL</SelectModeType>
+          <Range>1-3</Range>
+        </StaticFieldValueSelectMode>
+        <StaticFieldValuesUniteString>,</StaticFieldValuesUniteString>
+        <FieldNecessary>false</FieldNecessary>
+        <DefaultValue />
+        <CutEntitiesNumber>1</CutEntitiesNumber>
+        <CutBy>NOT_TRIM</CutBy>
+        <StringToSplitValueForCutting />
+        <SpecValueType>URL</SpecValueType>
+        <DownloadFiles>false</DownloadFiles>
+        <DownloadableExtensions />
+        <DownloadFolder />
+        <DownloadVirtualPath />
+        <DownloadLinkIdentificationRule />
+        <DownloadFilenameGenerationMode>NOT</DownloadFilenameGenerationMode>
+        <DownloadExistingFilesHandlingMode>OVERWRITE_EXISTING</DownloadExistingFilesHandlingMode>
+        <DownloadGenerationFilenameFormula />
+        <DownloadFileFinalExtension />
+        <DownloadFileFolderGenerationMode>NOT</DownloadFileFolderGenerationMode>
+        <DownloadGenerationFileFolderFormula />
+        <LoadMaxAttLoad>2</LoadMaxAttLoad>
+        <ReturnValue>FULL_VALUE</ReturnValue>
+        <LoadFilePlugin />
+        <DownloadFileFileFtpUpload>false</DownloadFileFileFtpUpload>
+        <DownloadFileFileRemoveFromComputerAfterFtpLoad>false</DownloadFileFileRemoveFromComputerAfterFtpLoad>
+        <FtpGenerateSubfolderServer>false</FtpGenerateSubfolderServer>
+        <DownloadFileFileMaximumFtpLoadAttempts>1</DownloadFileFileMaximumFtpLoadAttempts>
+        <FtpServer />
+        <FtpPort>0</FtpPort>
+        <FtpPassword />
+        <FtpDirectory />
+        <DataGatherPlugin />
+        <DataGatherPluginConfig />
+      </DataField>
+    </DataFields>
+  </ddgs>
+  <dynamicPluginEngineSetting>
+    <processLinkSetting>
+      <active>false</active>
+      <name>link process plugin</name>
+      <dllList>
+        <string>System.dll</string>
+      </dllList>
+      <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static List&lt;string&gt; processLinks(List&lt;string&gt; links, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return links;
+                                    }
+                                }
+                            }
+                        </sourceCode>
+      <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+      <dllListToIgnoreLoad />
+      <dynamicGUID />
+      <methodName>processLinks</methodName>
+    </processLinkSetting>
+    <preExportDataProcessSetting>
+      <active>false</active>
+      <name>pre export data plugin</name>
+      <dllList>
+        <string>System.dll</string>
+        <string>System.Data.dll</string>
+        <string>System.XML.dll</string>
+      </dllList>
+      <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using System.Data;
+                            using DynamicPluginData;
+                       
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static DataTable preExportData(DataTable dataTable, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return dataTable;
+                                    }
+                                }
+                            }
+                        </sourceCode>
+      <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+      <dllListToIgnoreLoad />
+      <dynamicGUID />
+      <methodName>preExportData</methodName>
+    </preExportDataProcessSetting>
+    <finishPluginSetting>
+      <active>false</active>
+      <name>finish campaign plugin</name>
+      <dllList>
+        <string>System.dll</string>
+        <string>System.Data.dll</string>
+        <string>System.XML.dll</string>
+      </dllList>
+      <sourceCode>
+                            using System;
+                            using System.Collections.Generic;
+                            using System.Text;
+                            using System.Data;
+                            using DynamicPluginData;
+
+                            namespace DatacolDynamicPluginNS
+                            {                
+                                public class DynamicPluginClass
+                                {     
+                                    public static DataTable finishCampaign(DataTable dataTable, ItemInfo itemInfo, GlobalInfo globalInfo)
+                                    {
+                                       return dataTable;
+                                    }
+                                }
+                            }
+                        </sourceCode>
+      <loadDllFromPluginSubfolder>false</loadDllFromPluginSubfolder>
+      <dllListToIgnoreLoad />
+      <dynamicGUID />
+      <methodName>finishCampaign</methodName>
+    </finishPluginSetting>
+  </dynamicPluginEngineSetting>
+  <ThreadNumber>3</ThreadNumber>
+</RunningCampaignSettingsParser>

@@ -8,38 +8,40 @@ import webbrowser
 import bs4
 import requests
 
-workbook = openpyxl.load_workbook('editex.xlsx')
+os.chdir('!WORKFLOW')
+
+workbook = openpyxl.load_workbook('resulttableStage1.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 sourceSheet = workbook.get_sheet_by_name('sourcesheet')
 
+# +++++++++++++++ SCRIPT START +++++++++++++++
+# *** SCRIPT CONFIGURATION:
+cell_start_number   = 2
+cell_end_number     = 8
+
+cell_source_start_number = 2
+cell_source_end_number = 4
+
 counter = 0
 
-for index in range(2, 235):
+for index in range(cell_start_number, cell_end_number + 1):
     initcounter = counter
     name_cell = sheet['A'+str(index)]
     ruslink_cell = sheet['E'+str(index)]
 
     rusUrl = ruslink_cell.value
 
-    # if index == 62:
-    #     print('Main name: ' + str(name_cell.value))
-
-
-    for indexInSource in range(2, 35):
+    for indexInSource in range(cell_source_start_number, cell_source_end_number + 1):
 
         nameSource_cell = sourceSheet['A'+str(indexInSource)]
-
-        # if index == 62:
-        #     print('-- Equal to ? : ' + str(nameSource_cell.value))
-
 
         sourceRusLink_cell = sourceSheet['C'+str(indexInSource)]
         sourceRusUrl = sourceRusLink_cell.value
 
         if rusUrl == sourceRusUrl:
             print('Proceeding: '+name_cell.value)
-            sheet['G'+str(index)] = sourceSheet['A'+str(indexInSource)].value
-            sheet['H'+str(index)] = sourceSheet['B'+str(indexInSource)].value
+            sheet['F'+str(index)] = sourceSheet['A'+str(indexInSource)].value
+            sheet['G'+str(index)] = sourceSheet['B'+str(indexInSource)].value
             sourceSheet['D'+str(indexInSource)] = "USED"
             counter += 1
 
@@ -47,6 +49,5 @@ for index in range(2, 235):
         print('Not found url for name: ' + str(name_cell.value))
 
 
-
 print('Total equal found: ' + str(counter))
-workbook.save('editexDone.xlsx')
+workbook.save('resulttableStage2.xlsx')

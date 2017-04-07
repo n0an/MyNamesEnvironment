@@ -11,11 +11,13 @@ from unidecode import unidecode
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
 
+os.chdir('!WORKFLOW')
+
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
-cell_end_number     = 6
+cell_end_number     = 8
 
-workbook = openpyxl.load_workbook('sourceTableStage2.xlsx')
+workbook = openpyxl.load_workbook('TemplateTable.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
 for index in range(cell_start_number, cell_end_number + 1):

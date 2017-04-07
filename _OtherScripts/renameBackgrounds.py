@@ -7,7 +7,6 @@ import shutil
 import struct
 import imghdr
 
-
 def get_image_size(fname):
     '''Determine the image type of fhandle and return its size.
     from draco'''
@@ -16,7 +15,7 @@ def get_image_size(fname):
         if len(head) != 24:
             return
         if imghdr.what(fname) == 'png':
-            
+
             check = struct.unpack('>i', head[4:8])[0]
             if check != 0x0d0a1a0a:
                 return
@@ -48,15 +47,16 @@ def get_image_size(fname):
 
 
 # ================= SCRIPT STARTS HERE ===================
-
-
+# *** SCRIPT CONFIGURATION:
+file_name_template = 'diceBG'
 scrDir = 'toRename/'
 targetDir = 'renamed/'
+
 
 files_list = os.listdir(scrDir)
 fileIndex = '01'
 for file_name in files_list:
-	
+
 	file_extenstion = file_name[-4:].lower()
 	if file_extenstion == 'jpeg':
 		file_extenstion = '.jpg'
@@ -72,12 +72,7 @@ for file_name in files_list:
 		print('t[1] = ', t[1])
 		print('max = ', resolution)
 
-
-	
-	full_new_name = targetDir + 'diceBG' + fileIndex + '_' + str(resolution) + file_extenstion
-
-
-
+	full_new_name = targetDir + file_name_template + fileIndex + '_' + str(resolution) + file_extenstion
 
 	tmpIndex = int(fileIndex) + 1
 	print('tmpIndex = ',tmpIndex)

@@ -118,27 +118,27 @@ def create_dir_for_names_images(category_path):
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
 
+os.chdir('!WORKFLOW')
+
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
-cell_end_number     = 6
+cell_end_number     = 8
 macos               = 1
+
+dir_path = create_dir_for_names_images('Fiction/Tolkien/')
 
 if macos == 1:
     # MacOS ver:
-    path_to_chromedriver = "../chromedriver"
+    path_to_chromedriver = "/Applications/chromedriver"
 else:
     # Windows ver:
     path_to_chromedriver = "C:/chromedriver.exe"
-
 
 driver = webdriver.Chrome(path_to_chromedriver)
 
 # === 1. Opening source workbook with names ===
 workbook = openpyxl.load_workbook('DoneTable.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
-
-dir_path = create_dir_for_names_images('Fiction/Tolkien/')
-
 
 # === 2. Iterating throught cells
 for index in range(cell_start_number ,cell_end_number + 1):

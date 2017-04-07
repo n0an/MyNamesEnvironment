@@ -4,10 +4,16 @@
 import os
 import shutil
 
-inputFile = open('!masc_name_image_conc.txt', 'r')
+# +++++++++++++++ SCRIPT START +++++++++++++++
+
+# *** SCRIPT CONFIGURATION:
+input_file_name 	= '!masc_name_image_conc.txt'
+dir_path 			= 'Fiction/Dune/Masc/
+images_source_dir 	= '!FictionDunceMascSRCImages/'
+
+inputFile = open(input_file_name, 'r')
 
 dir1 = {}
-
 
 # Getting lines from inputFile
 # 1. Setting keys of dictionary
@@ -51,20 +57,17 @@ for line in inputFile:
 # 	print()
 
 
-
 # 2.5 Creating directories
-
-dirPath = 'Fiction/Dune/Masc/'
+dirPath = dir_path
 
 for image_name in dir1.keys():
 	fullPath = dirPath+image_name
 	os.makedirs(fullPath)
 
-
 # 3. Cycling through dictionary's arrays.
 #	 Making "traits", and searching files using them
 #	 If file found - copy it to corresponding directory
-srcImgDir = '!FictionDunceMascSRCImages/'
+srcImgDir = images_source_dir
 files_list = os.listdir(srcImgDir)
 
 full_total_files_copied = 0
@@ -77,11 +80,8 @@ for image_name in dir1.keys():
 
 	files_count = 0
 	for name in curr_names_for_img:
-
-
 		for file_name in files_list:
 			l_file_name = file_name.lower()
-
 
 			if len(name) > 4:
 				trait = name[:4-len(name)]
