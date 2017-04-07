@@ -59,13 +59,13 @@
 - 'CategoryAliasGender.xlsx' - no race
 7. Move parsed images from *dirPath* to NamesImages storage directory.
 8. Copy column 'G' and column 'L' contens to Xcode project as plists.
-  8.1. In Xcode create 2 plists, named as 'CategoryAliasGender.plist' or 'CategoryAliasGenderRace.plist'
-  8.2. Localize created plists - enable Eng and Rus localizations.
-  8.3. Copy column contents to standard MacOs Notes.
-  8.4. Then copy from Notes to Xcode. This action removes unnecessary quotes symbols.
-  8.5. 'G' - ENG plist. 'L' - RUS plist
+  1. In Xcode create 2 plists, named as 'CategoryAliasGender.plist' or 'CategoryAliasGenderRace.plist'
+  2. Localize created plists - enable Eng and Rus localizations.
+  3. Copy column contents to standard MacOs Notes.
+  4. Then copy from Notes to Xcode. This action removes unnecessary quotes symbols.
+  5. 'G' - ENG plist. 'L' - RUS plist
 9. Upload names images using simulator, working directory.
-  9.1. Configure ANViewController uploadUsingFileManager() method
+  1. Configure ANViewController uploadUsingFileManager() method
     - Specify correct **pathName**. It will be used as directory name in Firebase Storage
     - Edit **fullFileName** prefix checking clause. It's preventing from uploading images from other category ang gender
-  9.2. Copy images to **!toUpload/** directory of simulator working directory. And press the **Upload** button.
+  2. Copy images to **!toUpload/** directory of simulator working directory. And press the **Upload** button.
