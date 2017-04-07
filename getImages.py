@@ -120,7 +120,7 @@ def create_dir_for_names_images(category_path):
 
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
-cell_end_number     = 73
+cell_end_number     = 6
 macos               = 1
 
 if macos == 1:
@@ -134,7 +134,7 @@ else:
 driver = webdriver.Chrome(path_to_chromedriver)
 
 # === 1. Opening source workbook with names ===
-workbook = openpyxl.load_workbook('sourcetable.xlsx')
+workbook = openpyxl.load_workbook('DoneTable.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
 dir_path = create_dir_for_names_images('Fiction/Tolkien/')

@@ -8,7 +8,7 @@ import webbrowser
 import bs4
 import requests
 
-workbook = openpyxl.load_workbook('tabletoedit.xlsx')
+workbook = openpyxl.load_workbook('sourcetableStage1.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
 counter = 0
@@ -37,4 +37,4 @@ for index in range(2, 235):
 
 
 print('Total rus urls found: ' + str(counter))
-workbook.save('editex.xlsx')
+workbook.save('resulttableStage1.xlsx')
