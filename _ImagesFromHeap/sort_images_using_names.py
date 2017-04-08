@@ -17,27 +17,17 @@ dir1 = {}
 
 # Getting lines from inputFile
 # 1. Setting keys of dictionary
-# linesList = []
-
 for line in inputFile:
 	trimmedLine = line.strip()
-
 	components = trimmedLine.split(':')
-
 	image_name = components[1]
 	name = components[0]
-
 	dir1[image_name] = []
 
-	# resLine = trimmedLine
-	# linesList.append(resLine)
-
-# print(dir1)
-
+# Go back to start of file
 inputFile.seek(0)
 
 # 2. Filling dictionary values with names
-
 for line in inputFile:
 	trimmedLine = line.strip()
 	components = trimmedLine.split(':')
@@ -46,8 +36,7 @@ for line in inputFile:
 
 	curr_names_for_img = dir1[image_name]
 	curr_names_for_img.append(name)
-	tmp = set(curr_names_for_img)
-	curr_names_for_img = list(tmp)
+	curr_names_for_img = list(set(curr_names_for_img))
 
 
 # --- CHECKING ---
@@ -57,7 +46,7 @@ for line in inputFile:
 # 	print()
 
 
-# 2.5 Creating directories
+# 2.5 Creating directories in dir_path
 dirPath = dir_path
 
 for image_name in dir1.keys():

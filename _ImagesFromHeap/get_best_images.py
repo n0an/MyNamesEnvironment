@@ -3,11 +3,11 @@
 
 import os
 import shutil
-
 import struct
 import imghdr
 
-
+# HELPER METHODS
+# Getting image width and height
 def get_image_size(fname):
     '''Determine the image type of fhandle and return its size.
     from draco'''
@@ -47,33 +47,17 @@ def get_image_size(fname):
         return width, height
 
 
-
-# ================= SCRIPT STARTS HERE ===================
-
-dirPath = 'Fiction/Dune/Masc/'
-os.makedirs('BestImages')
-targetPath = 'BestImages/'
-
-dirs_list = os.listdir(dirPath)
-
-# 1. Cleaning list from non neccessary dirs
-for dirr in dirs_list:
-	if dirr[:4] != 'Fiction':
-		dirs_list.remove(dirr)
-
-
-# 2. Entering in each dir, and cycling through images in it, finding the best in pixels
-#	 And copy best image to targetPath
-
+# Entering in each dir, and cycling through images in it, finding the best in pixels
+# And copy best image to target_path
 def cyclethroughdir(directory):
-	files_list = os.listdir(dirPath + directory)
+	files_list = os.listdir(dir_path + directory)
 	# print(directory, files_list)
 	images_qualities = []
 	maxQuality = 0
 	maxQualityFile = ''
 
 	for file_name in files_list:
-		full_fname = dirPath + directory + '/' + file_name
+		full_fname = dir_path + directory + '/' + file_name
 		t = get_image_size(full_fname)
 		if t != None:
 			# Don't take too wide or too high pics
@@ -98,6 +82,21 @@ def cyclethroughdir(directory):
 	return maxQualityFile
 
 
+# +++++++++++++++ SCRIPT START +++++++++++++++
+
+# *** SCRIPT CONFIGURATION:
+dir_path = 'Fiction/Dune/Masc/'
+target_path = 'BestImages/'
+check_dir_prefix = 'Fiction'
+# ***
+
+dirs_list = os.listdir(dir_path)
+os.makedirs(target_path)
+
+# 1. Cleaning list from non neccessary dirs
+for dirr in dirs_list:
+	if dirr[:4] != check_dir_prefix:
+		dirs_list.remove(dirr)
 
 for dirr in dirs_list:
 	result_file = cyclethroughdir(dirr)
@@ -107,9 +106,9 @@ for dirr in dirs_list:
 
 	file_extenstion = result_file[-4:]
 
-	full_scr_name = dirPath + dirr + '/' + result_file
+	full_scr_name = dir_path + dirr + '/' + result_file
 
-	full_new_name = targetPath + dirr + file_extenstion
+	full_new_name = target_path + dirr + file_extenstion.lower()
 
 	# print('full_scr_name =', full_scr_name)
 	# print('full_new_name =', full_new_name)

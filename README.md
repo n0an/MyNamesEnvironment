@@ -1,8 +1,10 @@
 # MyNamesEnvironment
 
--- [imagesFromHeap](./imagesFromHeap.md) (DEPRECATED)
-
 ## Workflow
+
+### Contents:
+[Collecting source data](#1)
+[Alternative workflow](#4)
 
 **!!!IMPORTANT!!!**
 Store all files in **!WORKFLOW** directory
@@ -116,3 +118,6 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - 'CategoryAliasGender.xlsx' - no race
 
 11. Move parsed images from *dirPath* to NamesImages storage directory.
+
+### Alternative workflow (not so clean and correct)
+-- [imagesFromHeap](./imagesFromHeap.md) (DEPRECATED)
