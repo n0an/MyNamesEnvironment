@@ -15,7 +15,7 @@ Methods:
 | **crop_from_index** | index for prefix to cut from filename |
 | **new_prefix** | new prefix instead of cropped |
 
-1. **renameBackgrounds.py** - cycle through images, and specify image size in filename
+2. **renameBackgrounds.py** - cycle through images, and specify image size in filename
 - Use for:
   - Rename parsed background images, to observe image size in filename
 
