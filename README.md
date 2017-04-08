@@ -3,8 +3,8 @@
 ## Workflow
 
 ### Contents:
-[Collecting source data](#1)
-[Alternative workflow](#4)
+[Collecting source data](#collecting-source-data)
+[Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
 
 **!!!IMPORTANT!!!**
 Store all files in **!WORKFLOW** directory
