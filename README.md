@@ -3,6 +3,9 @@
 ### Workflow
 
 #### Contents:
+
+- [Conception for App model architecture](./NamesConcept.md)
+
 - [Collecting source data](#collecting-source-data)
 - [Collecting RUS data](#collecting-rus-data)
 - [Processing collected data](#processing-collected-data)
