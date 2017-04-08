@@ -3,8 +3,12 @@
 ## Workflow
 
 ### Contents:
-[Collecting source data](#collecting-source-data)
-[Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
+- [Collecting source data](#collecting-source-data)
+- [Collecting RUS data](#collecting-rus-data)
+- [Processing collected data](#processing-collected-data)
+- [Collecting images for names](#collecting-images-for-names)
+- [Upload images to Firebase Storage](#transfer-data-from-donetablexlsx-to-xcode-plists-and-upload-images-to-firebase-storage)
+- [Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
 
 **!!!IMPORTANT!!!**
 Store all files in **!WORKFLOW** directory
