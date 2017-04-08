@@ -8,6 +8,7 @@
 - [Processing collected data](#processing-collected-data)
 - [Collecting images for names](#collecting-images-for-names)
 - [Upload images to Firebase Storage](#transfer-data-from-donetablexlsx-to-xcode-plists-and-upload-images-to-firebase-storage)
+- [Other scripts](#other-scripts)
 - [Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
 
 **!!!IMPORTANT!!!**
@@ -123,5 +124,8 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 
 11. Move parsed images from *dirPath* to NamesImages storage directory.
 
+#### Other scripts
+-- [OtherScripts](./OtherScripts.md)
+
 #### Alternative workflow (not so clean and correct)
--- [imagesFromHeap](./imagesFromHeap.md) (DEPRECATED)
+-- [ImagesFromHeap](./ImagesFromHeap.md) (DEPRECATED)
