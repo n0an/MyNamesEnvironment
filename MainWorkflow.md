@@ -111,9 +111,9 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Then copy from Notes to Xcode. This action removes unnecessary quotes symbols.
 - 'G' - ENG plist. 'L' - RUS plist
 9. Upload names images using simulator working directory.
-- Configure ANViewController uploadUsingFileManager() method
-  - Specify correct **pathName**. It will be used as directory name in Firebase Storage
-  - Edit **fullFileName** prefix checking clause. It's preventing from uploading images from other category and gender
+- Pay attention to ANViewController uploadUsingFileManager() method. Both parameters configured automatically, when category, gender and race selected:
+  - **pathName**.  It will be used as directory name in Firebase Storage
+  - **checkingPrefix** It's preventing from uploading images from other category, race and gender
 - Copy images from *dirPath* to **!toUpload/** directory of simulator working directory. And press the **Upload** button.
 
 10. Move *DoneTable.xlsx* to SourceTables storage directory. Rename file using template:
