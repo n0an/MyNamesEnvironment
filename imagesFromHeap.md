@@ -3,6 +3,13 @@
 ### This workflow works good in case if there're multiple names have the same imageName.
 ### For example if in source table 'Ahill', and 'Ahilles' have the same imageName 'MythGreekMascAhill'
 
+
+| Parameter     | Decription     |
+| :------------- | :------------- |
+| **input_file_name** | source file with 'name'+'imagename' concatenated |
+| **dir_path** | where to create folders tree with sorted images |
+| **images_source_dir** | source folder with images |
+
 1. Prepare files using concatenation in Excel with template *'name'+':'+'imageName'*:
 - **!fem_name_image_conc.txt**
 - **!masc_name_image_conc.txt**
