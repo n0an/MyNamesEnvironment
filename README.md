@@ -1,8 +1,8 @@
-# MyNamesEnvironment
+## MyNamesEnvironment
 
-## Workflow
+### Workflow
 
-### Contents:
+#### Contents:
 - [Collecting source data](#collecting-source-data)
 - [Collecting RUS data](#collecting-rus-data)
 - [Processing collected data](#processing-collected-data)
@@ -21,7 +21,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ pwd
 iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getImages.py
 ```
 
-### Collecting source data
+#### Collecting source data
 1. Collect ENG names data using parser. Collect name, description, gender, URL.
 - Use:
   - **Datacol parser**
@@ -35,7 +35,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Rename sheet with data to 'sheet1'
 - Put *sourcetableStage1.xlsx* to *!WORKFLOW* directory
 
-### Cellecting RUS data
+#### Cellecting RUS data
 2. For every ENG URL, collect corresponding RUS URL if it can be found.
 - Use:
   - **get_links_from_web.py**
@@ -71,7 +71,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Drag column E to column H (replace).  F - rus name, G - rus bio, H - rus url
 - Delete *resulttableStage1.xlsx*
 
-### Processing collected data
+#### Processing collected data
 5. Transfer data from *resulttableStage2.xlsx* to *TemplateTable.xlsx*:
 - Correct column 'C' - specify correct gender. If there's race - concatenate race + gender. For example
   - **HobbitMasc** - if it's hobbits race
@@ -92,7 +92,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Source: **TemplateTable.xlsx**
 - Result: **DoneTable.xlsx** (with imageName filled to column 'F' for every name).
 
-### Collecting images for names
+#### Collecting images for names
 7. Collect images for names using script
 - Use
   - **getImages.py**
@@ -104,7 +104,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Source: **DoneTable.xlsx**
 - Result: names images loaded and saved to *dirPath* using correct image names.
 
-### Transfer data from DoneTable.xlsx to Xcode Plists, and upload images to Firebase Storage
+#### Transfer data from DoneTable.xlsx to Xcode Plists, and upload images to Firebase Storage
 8. Copy column 'G' and column 'L' contents of **DoneTable.xlsx** to Xcode project as plists.
 - In Xcode create 2 plists, named as 'CategoryAliasGender.plist' or 'CategoryAliasGenderRace.plist'
 - Localize created plists - enable Eng and Rus localizations.
@@ -123,5 +123,5 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 
 11. Move parsed images from *dirPath* to NamesImages storage directory.
 
-### Alternative workflow (not so clean and correct)
+#### Alternative workflow (not so clean and correct)
 -- [imagesFromHeap](./imagesFromHeap.md) (DEPRECATED)

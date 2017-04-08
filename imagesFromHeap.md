@@ -1,14 +1,7 @@
-# Getting name images from images heap (DEPRECATED)
+## Getting name images from images heap (DEPRECATED)
 
-### This workflow works good in case if there're multiple names have the same imageName.
-### For example if in source table 'Ahill', and 'Ahilles' have the same imageName 'MythGreekMascAhill'
-
-
-| Parameter     | Decription     |
-| :------------- | :------------- |
-| **input_file_name** | source file with 'name'+'imagename' concatenated |
-| **dir_path** | where to create folders tree with sorted images |
-| **images_source_dir** | source folder with images |
+#### This workflow works good in case if there're multiple names have the same imageName.
+#### For example if in source table 'Ahill', and 'Ahilles' have the same imageName 'MythGreekMascAhill'
 
 1. Prepare files using concatenation in Excel with template *'name'+':'+'imageName'*:
 - **!fem_name_image_conc.txt**
@@ -32,6 +25,7 @@
 - Use:
   - **sort_images_using_names.py**
 - Configure script:
+
 | Parameter     | Decription     |
 | :------------- | :------------- |
 | **input_file_name** | source file with 'name'+'imagename' concatenated |
@@ -45,6 +39,7 @@
 - Use:
   - **get_best_images.py**
 - Configure script:
+
 | Parameter     | Decription     |
 | :------------- | :------------- |
 | **dir_path** | location of source folders tree with sorted images |
