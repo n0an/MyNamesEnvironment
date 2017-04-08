@@ -83,12 +83,13 @@ def cyclethroughdir(directory):
 
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
-
 # *** SCRIPT CONFIGURATION:
-dir_path = 'Fiction/Dune/Masc/'
+dir_path = 'Fiction/Tolkien/Fem/'
 target_path = 'BestImages/'
 check_dir_prefix = 'Fiction'
 # ***
+
+os.chdir('!WORKFLOW')
 
 dirs_list = os.listdir(dir_path)
 os.makedirs(target_path)

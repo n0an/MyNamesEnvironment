@@ -3,7 +3,6 @@
 
 import os
 import shutil
-
 import struct
 import imghdr
 
@@ -46,12 +45,14 @@ def get_image_size(fname):
         return width, height
 
 
-# ================= SCRIPT STARTS HERE ===================
+# +++++++++++++++ SCRIPT START +++++++++++++++
 # *** SCRIPT CONFIGURATION:
 file_name_template = 'diceBG'
 scrDir = 'toRename/'
 targetDir = 'renamed/'
+# ***
 
+os.chdir('!WORKFLOW')
 
 files_list = os.listdir(scrDir)
 fileIndex = '01'

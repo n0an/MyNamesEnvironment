@@ -7,9 +7,11 @@ import shutil
 # +++++++++++++++ SCRIPT START +++++++++++++++
 
 # *** SCRIPT CONFIGURATION:
-input_file_name 	= '!masc_name_image_conc.txt'
-dir_path 			= 'Fiction/Dune/Masc/
-images_source_dir 	= '!FictionDunceMascSRCImages/'
+input_file_name 	= '!fem_name_image_conc.txt'
+dir_path 			= 'Fiction/Tolkien/Fem/'
+images_source_dir 	= 'SRCImages/'
+
+os.chdir('!WORKFLOW')
 
 inputFile = open(input_file_name, 'r')
 
@@ -33,7 +35,6 @@ for line in inputFile:
 	components = trimmedLine.split(':')
 	image_name = components[1]
 	name = components[0].lower()
-
 	curr_names_for_img = dir1[image_name]
 	curr_names_for_img.append(name)
 	curr_names_for_img = list(set(curr_names_for_img))

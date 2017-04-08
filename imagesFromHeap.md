@@ -3,23 +3,24 @@
 #### This workflow works good in case if there're multiple names have the same imageName.
 #### For example if in source table 'Ahill', and 'Ahilles' have the same imageName 'MythGreekMascAhill'
 
+**!!!IMPORTANT!!!**
+Store all files in **!WORKFLOW** directory
+
 1. Prepare files using concatenation in Excel with template *'name'+':'+'imageName'*:
 - **!fem_name_image_conc.txt**
 - **!masc_name_image_conc.txt**
 
 2. Parse images from the internet using ContentDownloader parser with following actions:
 - 'Ссылки' tab
-- Add links from source names table (F8)
+- Add links from source names table (F8). Add ENG URLs and RUS URLs at one time.
 - Click Run (F5)
 - Wait till done.
-- Copy all parsed links
 - Go to 'Контент' tab
-- Paste links in bottom pane (F8)
 - Click Run (F5)
 - Wait till done.
 - Go to 'C:/content'
 - Copy 'images' folder to !WORKFLOW directory
-- Rename 'images' folder using template: *'CategoryAliasGender'+'SRCImages'*
+- Rename 'images' folder using template: *'SRCImages'*
 
 2. Sort parsed images heap to separate folders named according to parsed names
 - Use:
@@ -31,9 +32,9 @@
 | **input_file_name** | source file with 'name'+'imagename' concatenated |
 | **dir_path** | where to create folders tree with sorted images |
 | **images_source_dir** | source folder with images |
-- Source: folder-heap with images
+- Source: folder-heap with images *'SRCImages'*
 - Result: images sorted to directories named according to names
-- Delete images heap folder
+- Delete images heap folder *'SRCImages'*
 
 3. Select best images from sorted images folders tree
 - Use:

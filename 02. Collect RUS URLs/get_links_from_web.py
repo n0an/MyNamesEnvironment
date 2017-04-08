@@ -17,6 +17,7 @@ sheet = workbook.get_sheet_by_name('sheet1')
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
 cell_end_number     = 8
+# ***
 
 counter = 0
 
