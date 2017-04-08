@@ -16,6 +16,7 @@
 
 For example:
 > 01.02.0.15 = Myth, Vedic, Masculine, 15th name in Plist
+
 > 02.02.1.2.03 = Fiction, Tolkien, Feminine, 2nd name in Plist, Hobbits race
 
 #### Specific ID keys description:
@@ -26,7 +27,7 @@ For example:
 | **02** | Fiction and Fantasy  |
 | **03** | Ancient names  |
 
-#### Category of Area
+##### Category of Area
 | Area Key     | Category Key     | Description |
 | :------------- | :------------- | ------ |
 | **01** | **01** | Mythological |
@@ -39,7 +40,7 @@ For example:
 | **02** | **01** | Dune |
 | | **02** | Tolkien |
 
-#### Races of categories
+##### Races of categories
 | Area Key     | Category Key     | Race Key | Description |
 | :------------- | :------------- | ------ | ----- |
 | **02** | **02** | 01 | Elves |
