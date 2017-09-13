@@ -11,31 +11,23 @@ class GotspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         name = response.xpath('//*[@class="page-header__title"]/text()').extract()
+
+
+
         full_description = ""
 
         cleanr = re.compile('<.*?>')
 
         all_paragraphs = response.xpath('//*[@id="mw-content-text"]/p').extract()
 
+
         for par in all_paragraphs:
             clean_description = re.sub(cleanr, '', par)
-            full_description += clean_description
+            if len(full_description) < 5000:
+                full_description += clean_description
+            else:
+                break
 
-
-        # description1 = response.xpath('//*[@id="mw-content-text"]/p[1]').extract_first()
-        # description2 = response.xpath('//*[@id="mw-content-text"]/p[2]').extract_first()
-
-        # Alternative way (not optimal maybe):
-        # description1ByCss = response.css('#mw-content-text > p:nth-child(2)').extract()
-
-        # description1_text = cleanhtml(description1)
-        # description2_text = cleanhtml(description2)
-
-        # cleanr = re.compile('<.*?>')
-        # description1_text = re.sub(cleanr, '', description1)
-        # description2_text = re.sub(cleanr, '', description2)
-
-        # full_description = description1_text + description2_text
 
         engurl = response.xpath('//*[@data-tracking="interwiki-en"]/@href').extract()
 
