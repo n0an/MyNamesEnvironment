@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+import re
 
 
 class GotstarknamesSpider(scrapy.Spider):
@@ -63,8 +64,38 @@ class GotstarknamesSpider(scrapy.Spider):
  u'http://ru.gameofthrones.wikia.com/wiki/%D0%A5%D0%BE%D0%B4%D0%BE%D1%80',
  u'http://ru.gameofthrones.wikia.com/wiki/%D0%AD%D0%B4%D0%B4%D0%B0%D1%80%D0%B4_%D0%A1%D1%82%D0%B0%D1%80%D0%BA']
 
+    # Method doesn't work as supposed. Copy paste of re.sub... into parse() method used.
+    def cleanhtml(raw_html):
+        cleanr = re.compile('<.*?>')
+        cleantext = re.sub(cleanr, '', raw_html)
+        return cleantext
 
     def parse(self, response):
         name = response.xpath('//*[@class="page-header__title"]/text()').extract()
+        full_description = ""
+
+        description1 = response.xpath('//*[@id="mw-content-text"]/p[1]').extract_first()
+        description2 = response.xpath('//*[@id="mw-content-text"]/p[2]').extract_first()
+        # description1ByCss = response.css('#mw-content-text > p:nth-child(2)').extract()
+
+        # description1_text = cleanhtml(description1)
+        # description2_text = cleanhtml(description2)
+
+        cleanr = re.compile('<.*?>')
+        description1_text = re.sub(cleanr, '', description1)
+        description2_text = re.sub(cleanr, '', description2)
+
+        full_description = description1_text + description2_text
+
+        engurl = response.xpath('//*[@data-tracking="interwiki-en"]/@href').extract()
+
         print('Name = ', name)
-        yield {'Name': name}
+        if full_description != "":
+            print('Description +++')
+
+        yield {
+                'Rus Name':         name,
+                'Rus Description':  full_description,
+                'Rus Url':          response.url,
+                'Eng Url':          engurl
+                }
