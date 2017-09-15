@@ -9,6 +9,15 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+
+FEED_EXPORT_FIELDS = [
+                'name',
+                'full_description',
+                'image_url',
+                'rus_url',
+                'eng_url'
+                ]
+
 BOT_NAME = 'got_stark_names'
 
 SPIDER_MODULES = ['got_stark_names.spiders']
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'got_stark_names.pipelines.GotStarkNamesPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'got_stark_names.pipelines.GotPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
