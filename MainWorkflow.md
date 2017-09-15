@@ -1,7 +1,7 @@
 ### Main Workflow for creating data models
 
 #### Contents:
-- [Scrapy Workflow]()
+- [Scrapy Workflow](#scrapy-workflow-newest)
 - [Collecting source data](#collecting-source-data)
 - [Collecting RUS data](#collecting-rus-data)
 - [Processing collected data](#processing-collected-data)
@@ -10,7 +10,7 @@
 - [Other scripts](#other-scripts)
 - [Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
 
-### Scrapy Workflow (NEWEST)
+#### Scrapy Workflow (NEWEST)
 -- [Scrapy Workflow](./ScrapyWorkflow.md)
 Use this newest way to collect data, using Scrapy framework. After data parsing you should proceed to MainWorkflow step - [Processing collected data](#processing-collected-data)
 
