@@ -15,7 +15,10 @@ FEED_EXPORT_FIELDS = [
                 'full_description',
                 'image_url',
                 'rus_url',
-                'eng_url'
+                'eng_url',
+                'eng_name',
+                'eng_description',
+                'eng_image_url'
                 ]
 
 BOT_NAME = 'got_stark_names'

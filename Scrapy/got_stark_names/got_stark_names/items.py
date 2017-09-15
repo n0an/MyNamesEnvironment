@@ -14,3 +14,6 @@ class GotItem(scrapy.Item):
     image_url = scrapy.Field()
     rus_url = scrapy.Field()
     eng_url = scrapy.Field()
+    eng_name = scrapy.Field()
+    eng_description = scrapy.Field()
+    eng_image_url = scrapy.Field()

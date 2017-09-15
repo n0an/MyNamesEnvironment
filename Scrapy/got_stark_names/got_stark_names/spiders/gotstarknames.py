@@ -11,7 +11,7 @@ def cleanhtml(raw_html):
 
 class GotstarknamesSpider(Spider):
     name = 'gotstarknames'
-    allowed_domains = ['ru.gameofthrones.wikia.com']
+    allowed_domains = ['ru.gameofthrones.wikia.com', 'gameofthrones.wikia.com']
     # start_urls = ['http://ru.gameofthrones.wikia.com/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%94%D0%BE%D0%BC_%D0%A1%D1%82%D0%B0%D1%80%D0%BA%D0%BE%D0%B2/']
 
     def __init__(self, category):
@@ -36,7 +36,7 @@ class GotstarknamesSpider(Spider):
 
         full_description = ""
 
-        cleanr = re.compile('<.*?>')
+        # cleanr = re.compile('<.*?>')
 
         all_paragraphs = response.xpath('//*[@id="mw-content-text"]/p').extract()
 
@@ -51,12 +51,46 @@ class GotstarknamesSpider(Spider):
         eng_url = response.xpath('//*[@data-tracking="interwiki-en"]/@href').extract_first()
         image_url = response.xpath('//*[@class="pi-image-thumbnail"]/@src').extract_first()
 
+
+        rus_name_meta = {
+                'name': name,
+                'full_description': full_description,
+                'image_url': image_url,
+                'rus_url': rus_url,
+                'eng_url': eng_url
+        }
+
+
+        yield Request(eng_url, callback=self.parse_eng_name_page, meta=rus_name_meta)
+
+        # yield item
+
+    def parse_eng_name_page(self, response):
+        eng_name = response.xpath('//*[@class="page-header__title"]/text()').extract_first()
+
+        full_eng_description = ""
+
+        all_paragraphs = response.xpath('//*[@id="mw-content-text"]/p').extract()
+
+        for par in all_paragraphs:
+            clean_description = cleanhtml(par)
+            if len(full_eng_description) < 5000:
+                full_eng_description += clean_description
+            else:
+                break
+
+
         item = GotItem()
 
-        item['name'] = name
-        item['full_description'] = full_description
-        item['image_url'] = image_url
-        item['rus_url'] = rus_url
-        item['eng_url'] = eng_url
+        item['name'] = response.meta['name']
+        item['full_description'] = response.meta['full_description']
+        item['image_url'] = response.meta['image_url']
+        item['rus_url'] = response.meta['rus_url']
+        item['eng_url'] = response.meta['eng_url']
+
+        eng_image_url = response.xpath('//*[@class="pi-image-thumbnail"]/@src').extract_first()
+        item["eng_name"] = eng_name
+        item['eng_description'] = full_eng_description
+        item['eng_image_url'] = eng_image_url
 
         yield item

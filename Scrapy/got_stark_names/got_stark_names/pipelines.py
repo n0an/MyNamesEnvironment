@@ -18,7 +18,10 @@ class GotPipeline(object):
             'Rus Description',
             'Image Url',
             'Rus Url',
-            'Eng Url'
+            'Eng Url',
+            'Eng Name',
+            'Eng Description',
+            'Eng Image Url'
             ])
 
     def process_item(self, item, spider):
@@ -27,7 +30,10 @@ class GotPipeline(object):
             item['full_description'],
             item['image_url'],
             item['rus_url'],
-            item['eng_url']
+            item['eng_url'],
+            item['eng_name'],
+            item['eng_description'],
+            item['eng_image_url']
             ]
 
 
