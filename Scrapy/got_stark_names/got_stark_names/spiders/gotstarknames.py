@@ -54,7 +54,7 @@ class GotstarknamesSpider(Spider):
 
         rus_name_meta = {
                 'name': name,
-                'full_description': full_description,
+                'full_description': full_description.strip(),
                 'image_url': image_url,
                 'rus_url': rus_url,
                 'eng_url': eng_url
@@ -88,7 +88,7 @@ class GotstarknamesSpider(Spider):
 
         eng_image_url = response.xpath('//*[@class="pi-image-thumbnail"]/@src').extract_first()
         item["eng_name"] = eng_name
-        item['eng_description'] = full_eng_description
+        item['eng_description'] = full_eng_description.strip()
         item['eng_image_url'] = eng_image_url
         item['house'] = house
 

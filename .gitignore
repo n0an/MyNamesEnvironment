@@ -1,4 +1,4 @@
 *.json
 *.csv
-*.xls*
+/Scrapy/got_stark_names/results/*
 *.pyc
