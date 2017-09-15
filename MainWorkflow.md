@@ -1,6 +1,7 @@
 ### Main Workflow for creating data models
 
 #### Contents:
+- [Scrapy Workflow]()
 - [Collecting source data](#collecting-source-data)
 - [Collecting RUS data](#collecting-rus-data)
 - [Processing collected data](#processing-collected-data)
@@ -8,6 +9,11 @@
 - [Upload images to Firebase Storage](#transfer-data-from-donetablexlsx-to-xcode-plists-and-upload-images-to-firebase-storage)
 - [Other scripts](#other-scripts)
 - [Alternative workflow](#alternative-workflow-not-so-clean-and-correct)
+
+### Scrapy Workflow (NEWEST)
+-- [Scrapy Workflow](./ScrapyWorkflow.md)
+Use this newest way to collect data, using Scrapy framework. After data parsing you should proceed to MainWorkflow step - [Processing collected data](#processing-collected-data)
+
 
 **!!!IMPORTANT!!!**
 Store all files in **!WORKFLOW** directory

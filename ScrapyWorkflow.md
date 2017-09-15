@@ -16,4 +16,4 @@ http://ru.gameofthrones.wikia.com/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%8
 4. Result in the same directory:
  - ANY_FILE_NAME.csv
  - result-excel.xlsx
-5. Use result-excel.xlsx file to further steps according to MainWorkflow. You should begin from step [Processing collected data](MainWorkflow.md/#processing-collected-data) of MainWorkflow
+5. Use result-excel.xlsx file to further steps according to MainWorkflow. You should begin from step [Processing collected data](./MainWorkflow.md/#processing-collected-data) of MainWorkflow
