@@ -27,16 +27,16 @@ class GotstarknamesSpider(Spider):
             # print "Open page = " + absolute_url
             yield Request(absolute_url, callback=self.parse_name_page)
 
-        # Process next page (for future)
-
+        # Process next page
+        next_page_url = response.xpath('//*[@class="paginator-next button secondary"]/@href').extract_first()
+        if next_page_url != None:
+            yield Request(next_page_url)
 
     def parse_name_page(self, response):
 
         name = response.xpath('//*[@class="page-header__title"]/text()').extract_first()
 
         full_description = ""
-
-        # cleanr = re.compile('<.*?>')
 
         all_paragraphs = response.xpath('//*[@id="mw-content-text"]/p').extract()
 
@@ -60,10 +60,7 @@ class GotstarknamesSpider(Spider):
                 'eng_url': eng_url
         }
 
-
         yield Request(eng_url, callback=self.parse_eng_name_page, meta=rus_name_meta)
-
-        # yield item
 
     def parse_eng_name_page(self, response):
         eng_name = response.xpath('//*[@class="page-header__title"]/text()').extract_first()
@@ -79,6 +76,7 @@ class GotstarknamesSpider(Spider):
             else:
                 break
 
+        house = response.xpath('//h3[text()="Allegiance"]/following-sibling::div/a/text()').extract_first()
 
         item = GotItem()
 
@@ -92,5 +90,6 @@ class GotstarknamesSpider(Spider):
         item["eng_name"] = eng_name
         item['eng_description'] = full_eng_description
         item['eng_image_url'] = eng_image_url
+        item['house'] = house
 
         yield item

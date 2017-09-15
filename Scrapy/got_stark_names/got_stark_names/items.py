@@ -17,3 +17,4 @@ class GotItem(scrapy.Item):
     eng_name = scrapy.Field()
     eng_description = scrapy.Field()
     eng_image_url = scrapy.Field()
+    house = scrapy.Field()

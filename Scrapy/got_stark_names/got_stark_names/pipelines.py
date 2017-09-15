@@ -21,7 +21,8 @@ class GotPipeline(object):
             'Eng Url',
             'Eng Name',
             'Eng Description',
-            'Eng Image Url'
+            'Eng Image Url',
+            'House'
             ])
 
     def process_item(self, item, spider):
@@ -33,7 +34,8 @@ class GotPipeline(object):
             item['eng_url'],
             item['eng_name'],
             item['eng_description'],
-            item['eng_image_url']
+            item['eng_image_url'],
+            item['house']
             ]
 
 
