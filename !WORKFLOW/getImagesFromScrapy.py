@@ -138,7 +138,7 @@ def retr_image_for_url(url):
 
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
-cell_end_number     = 10
+cell_end_number     = 28
 macos               = 1
 
 dir_path = create_dir_for_names_images('Fiction/GOT/')

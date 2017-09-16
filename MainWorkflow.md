@@ -120,7 +120,7 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
 - Pay attention to ANViewController uploadUsingFileManager() method. Both parameters configured automatically, when category, gender and race selected:
   - **pathName**.  It will be used as directory name in Firebase Storage
   - **checkingPrefix** It's preventing from uploading images from other category, race and gender
-- Copy images from *dirPath* to **!toUpload/** directory of simulator working directory. And press the **Upload** button.
+- Copy images from *dirPath* to **!ToUpload/** directory of simulator working directory. And press the **Upload** button.
 
 10. Move *DoneTable.xlsx* to NamesDB storage directory. Rename file using template:
 - 'AreaCategoryGenderRace.xlsx' - if there's race

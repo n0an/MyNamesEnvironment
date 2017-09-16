@@ -37,7 +37,6 @@ For example:
 |                | **05**           | Egypt            |
 |                | **06**           | Persian          |
 |                | **07**           | Celtic           |
-| :------------- | :-------------   | ------           |
 | **02**         | **01**           | Dune             |
 |                | **02**           | Tolkien          |
 |                | **03**           | Game of Thrones  |
@@ -53,7 +52,6 @@ For example:
 |                |                | 06       | Orcs        |
 |                |                | 07       | Ents        |
 |                |                | 08       | Dragons     |
-| :------------- | :------------- | ------   | -----       |
 |                | **03**         | 01       | Stark       |
 |                |                | 02       | Targaryen   |
 |                |                | 03       | Lannister   |

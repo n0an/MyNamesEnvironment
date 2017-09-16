@@ -12,7 +12,7 @@ from unidecode import unidecode
 cell_start_number   = 2
 cell_end_number     = 10
 
-workbook = openpyxl.load_workbook('TemplateTableNew.xlsx')
+workbook = openpyxl.load_workbook('FictionGOTFemStark.xlsx')
 sheet = workbook.get_sheet_by_name('sheet1')
 
 for index in range(cell_start_number, cell_end_number + 1):
