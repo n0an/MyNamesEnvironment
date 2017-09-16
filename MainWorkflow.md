@@ -122,9 +122,9 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
   - **checkingPrefix** It's preventing from uploading images from other category, race and gender
 - Copy images from *dirPath* to **!toUpload/** directory of simulator working directory. And press the **Upload** button.
 
-10. Move *DoneTable.xlsx* to SourceTables storage directory. Rename file using template:
-- 'CategoryAliasGenderRace.xlsx' - if there's race
-- 'CategoryAliasGender.xlsx' - no race
+10. Move *DoneTable.xlsx* to NamesDB storage directory. Rename file using template:
+- 'AreaCategoryGenderRace.xlsx' - if there's race
+- 'AreaCategoryGender.xlsx' - no race
 
 11. Move parsed images from *dirPath* to NamesImages storage directory.
 
