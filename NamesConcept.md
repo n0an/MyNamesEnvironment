@@ -25,7 +25,7 @@ For example:
 | :------------- | :-------------       |
 | **01**         | Mythological         |
 | **02**         | Fiction and Fantasy  |
-| **03**         | Ancient names        |
+| **03**         | Ancient real names   |
 
 ##### Category of Area
 | Area Key       | Category Key     | Description      |
@@ -41,17 +41,18 @@ For example:
 |                | **02**           | Tolkien          |
 |                | **03**           | Game of Thrones  |
 
-##### Races of categories
-| Area Key       | Category Key   | Race Key | Description |
-| :------------- | :------------- | ------   | -----       |
-| **02**         | **02**         | 01       | Elves       |
-|                |                | 02       | Men         |
-|                |                | 03       | Hobbits     |
-|                |                | 04       | Dwarves     |
-|                |                | 05       | Ainur       |
-|                |                | 06       | Orcs        |
-|                |                | 07       | Ents        |
-|                |                | 08       | Dragons     |
-|                | **03**         | 01       | Stark       |
-|                |                | 02       | Targaryen   |
-|                |                | 03       | Lannister   |
+##### Races or house, or subcat, or etc.
+| Area Key       | Category Key   | Race Key | Description       |
+| :------------- | :------------- | ------   | -----             |
+| **02**         | **02**         | 01       | Elves             |
+|                |                | 02       | Men               |
+|                |                | 03       | Hobbits           |
+|                |                | 04       | Dwarves           |
+|                |                | 05       | Ainur             |
+|                |                | 06       | Orcs              |
+|                |                | 07       | Ents              |
+|                |                | 08       | Dragons           |
+|                | **03**         | 01       | Stark             |
+|                |                | 02       | Targaryen         |
+|                |                | 03       | Lannister         |
+|                |                | 04       | Other (not shown) |
