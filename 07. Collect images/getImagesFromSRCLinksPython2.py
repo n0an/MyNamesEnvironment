@@ -4,7 +4,7 @@
 import os
 import shutil
 import openpyxl
-import urllib.request
+import urllib
 
 # Helper methods
 def create_dir_for_names_images(category_path):
@@ -34,19 +34,19 @@ def retr_image_for_url(url):
 
     image_file_name = imagename + get_image_extension(url)
 
-    urllib.request.urlretrieve(cleanedImgSrc, dir_path + image_file_name)
+    urllib.urlretrieve(cleanedImgSrc, dir_path + image_file_name)
     print('***** Image saved!!! *****')
 
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
 
 # *** SCRIPT CONFIGURATION:
-cell_start_number   = 29
-cell_end_number     = 32
+cell_start_number   = 2
+cell_end_number     = 133
 dir_path = create_dir_for_names_images('Fiction/GOT/')
 
 # *** SCRIPT START:
-os.chdir('../!WORKFLOW')
+# os.chdir('../!WORKFLOW')
 
 # === 1. Opening source workbook with names ===
 workbook = openpyxl.load_workbook('DoneTable.xlsx')

@@ -14,11 +14,11 @@ def is_element_width_ok(element):
     return element_width > 190
 
 def is_element_src_ok(element):
-    element_scr_contains_lotr_traits = element.get_attribute('src').find("wikia.nocookie.net/lotr/images") != -1
+    element_scr_contains_lotr_traits = element.get_attribute('src').lower().find("wikia.nocookie.net/lotr/images") != -1
     return element_scr_contains_lotr_traits
 
 def is_element_contains_extension(str, extension):
-    return str.find(extension) != -1
+    return str.lower().find(extension) != -1
 
 def get_image_extension(url):
     if is_element_contains_extension(url, ".jpg"):
@@ -48,7 +48,7 @@ def save_image_for_url(url, rusUrl = False, imagesCounter = -1):
     cleanedImgSrc = url
 
     if not rusUrl:
-        urlEndPosition = url.find('/revision')
+        urlEndPosition = url.lower().find('/revision')
         cleanedImgSrc = url[:urlEndPosition]
 
     print('Link found: ' + cleanedImgSrc)
@@ -83,7 +83,7 @@ def retrieve_image_for_url(url, rusUrl = False, imagesCounter = -1):
     cleanedImgSrc = url
 
     if not rusUrl:
-        urlEndPosition = url.find('/revision')
+        urlEndPosition = url.lower().find('/revision')
         cleanedImgSrc = url[:urlEndPosition]
 
     print('Link found: ' + cleanedImgSrc)
@@ -184,7 +184,7 @@ for index in range(cell_start_number ,cell_end_number + 1):
         ruslink_cell    = sheet['K'+str(index)]
         rusurl          = ruslink_cell.value
 
-        if str(rusurl).find('http') == -1:
+        if str(rusurl).lower().find('http') == -1:
             print("There's no RUS URL for name: " + name)
             print('++++++ Going to the next name ++++++')
             continue
