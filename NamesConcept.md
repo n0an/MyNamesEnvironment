@@ -28,18 +28,20 @@ For example:
 | **03**         | Ancient real names   |
 
 ##### Category of Area
-| Area Key       | Category Key     | Description      |
-| :------------- | :-------------   | ------           |
-| **01**         | **01**           | Mythological     |
-|                | **02**           | Vedic            |
-|                | **03**           | Roman            |
-|                | **04**           | Norse            |
-|                | **05**           | Egypt            |
-|                | **06**           | Persian          |
-|                | **07**           | Celtic           |
-| **02**         | **01**           | Dune             |
-|                | **02**           | Tolkien          |
-|                | **03**           | Game of Thrones  |
+| Area Key       | Category Key     | Description         |
+| :------------- | :-------------   | ------              |
+| **01**         | **01**           | Mythological        |
+|                | **02**           | Vedic               |
+|                | **03**           | Roman               |
+|                | **04**           | Norse               |
+|                | **05**           | Egypt               |
+|                | **06**           | Persian             |
+|                | **07**           | Celtic              |
+| **02**         | **01**           | Dune                |
+|                | **02**           | Tolkien             |
+|                | **03**           | Game of Thrones     |
+|                | **04**           | Star Wars           |
+|                | **05**           | Chronicles of Amber |
 
 ##### Races or house, or subcat, or etc.
 | Area Key       | Category Key   | Race Key | Description       |
