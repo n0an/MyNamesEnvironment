@@ -13,14 +13,13 @@ class StarwarsPipeline(object):
 
     # Excel File Headers
     ws.append([
-            'Name',
-            'Description',
-            'Eng Image Url',
-            'Eng Url',
-            'Rus Url',
             'Rus Name',
             'Rus Description',
-            'Rus Image Url',
+            'Image Url',
+            'Rus Url',
+            'Eng Url',
+            'Eng Name',
+            'Eng Description',
             'Race'
             ])
 
@@ -29,16 +28,12 @@ class StarwarsPipeline(object):
             item['name'],
             item['full_description'],
             item['image_url'],
-            item['eng_url'],
             item['rus_url'],
-            item['rus_name'],
-            item['rus_description'],
-            item['rus_image_url'],
+            item['eng_url'],
+            item['eng_name'],
+            item['eng_description'],
             item['race']
             ]
-
-
-
 
         # Add the data to xlsx as a line
         self.ws.append(line)

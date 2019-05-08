@@ -9,17 +9,16 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-LOG_LEVEL = 'ERROR'
+LOG_LEVEL = 'INFO'
 
 FEED_EXPORT_FIELDS = [
                 'name',
                 'full_description',
                 'image_url',
-                'eng_url',
                 'rus_url',
-                'rus_name',
-                'rus_description',
-                'rus_image_url',
+                'eng_url',
+                'eng_name',
+                'eng_description',
                 'race'
                 ]
 
