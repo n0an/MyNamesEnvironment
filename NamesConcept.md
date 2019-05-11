@@ -58,3 +58,7 @@ For example:
 |                |                | 02       | Targaryen         |
 |                |                | 03       | Lannister         |
 |                |                | 04       | Other (not shown) |
+|                | **04**         | 01       | Human             |
+|                |                | 02       | Wookie            |
+|                |                | 03       | Sith              |
+|                |                | 04       | Yoda              |

@@ -40,6 +40,8 @@ def retr_image_for_url(url):
 
 # +++++++++++++++ SCRIPT START +++++++++++++++
 
+# DEPRECATED!!! USE 'getImagesFromSRCLinks.py' with Python 3 version
+
 # *** SCRIPT CONFIGURATION:
 cell_start_number   = 2
 cell_end_number     = 133

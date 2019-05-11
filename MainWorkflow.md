@@ -95,27 +95,27 @@ iMac-Anton:MyNamesEnvironment antonnovoselov$ python 07.\ Collect\ images/getIma
    - **cell_start_number**
    - **cell_end_number**
 - Source: **TemplateTable.xlsx**
-- Result: **DoneTable.xlsx** (with imageName filled to column 'F' for every name).
+- Result: **DoneTable.xlsx** (with imageName filled to column 'G' for every name).
 
 #### Collecting images for names
 7. Collect images for names using script
 - Use
-  - **getImages.py**
+  - **getImagesFromSRCLinks.py**
 - Configure:
   - **cell_start_number**
   - **cell_end_number**
-  - **macos** = True/False
+  - **macos** = True/False (for Selenium version of script)
   - **dirPath** - path where save parsed from URLs images
 - Source: **DoneTable.xlsx**
 - Result: names images loaded and saved to *dirPath* using correct image names.
 
 #### Transfer data from DoneTable.xlsx to Xcode Plists, and upload images to Firebase Storage
-8. Copy column 'G' and column 'L' contents of **DoneTable.xlsx** to Xcode project as plists.
+8. Copy column 'H' and column 'M' contents of **DoneTable.xlsx** to Xcode project as plists.
 - In Xcode create 2 plists, named as 'CategoryAliasGender.plist' or 'CategoryAliasGenderRace.plist'
 - Localize created plists - enable Eng and Rus localizations.
 - Copy column contents to standard MacOS Notes.
 - Then copy from Notes to Xcode. This action removes unnecessary quotes symbols.
-- 'G' - ENG plist. 'L' - RUS plist
+- 'H' - ENG plist. 'M' - RUS plist
 9. Upload names images using simulator working directory.
 - Pay attention to ANViewController uploadUsingFileManager() method. Both parameters configured automatically, when category, gender and race selected:
   - **pathName**.  It will be used as directory name in Firebase Storage
